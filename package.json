@@ -1,41 +1,37 @@
 {
-  "name": "my-back-end-system",
+  "name": "sequelize-ts-example",
   "version": "1.0.0",
-  "description": "",
+  "description": "The egg ts example project that uses egg-sequelize plugin.",
   "private": true,
-  "egg": {
-    "declarations": true
-  },
   "dependencies": {
-    "egg": "^3.17.5",
-    "egg-scripts": "2",
-    "egg-sequelize": "^6.0.0",
-    "mysql2": "^3.14.0"
+    "egg": "^2.10.0",
+    "egg-sequelize": "^5.0.0",
+    "mysql2": "^1.6.1"
   },
   "devDependencies": {
-    "@types/sequelize": "^4.28.20",
-    "egg-bin": "6",
-    "egg-mock": "5",
-    "eslint": "8",
-    "eslint-config-egg": "13"
+    "@types/mocha": "^5.2.6",
+    "autod": "^3.0.1",
+    "egg-bin": "^4.8.1",
+    "egg-mock": "^3.19.2",
+    "factory-girl": "^5.0.2",
+    "lodash": "^4.17.10",
+    "sequelize-cli": "^5.0.0"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=8.9.0"
+  },
+  "egg": {
+    "typescript": true,
+    "declarations": true
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --title=egg-server-my-back-end-system",
-    "stop": "egg-scripts stop --title=egg-server-my-back-end-system",
     "dev": "egg-bin dev",
-    "test": "npm run lint -- --fix && npm run test:local",
-    "test:local": "egg-bin test",
+    "test": "NODE_ENV=test npm run sequelize -- db:migrate && egg-bin test",
     "cov": "egg-bin cov",
-    "lint": "eslint .",
-    "ci": "npm run lint && npm run cov"
+    "ci": "npm run cov",
+    "autod": "autod",
+    "sequelize": "sequelize --"
   },
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
-  "author": "jason tian",
+  "author": "Qi Yu <njuyuqi@gmail.coom>",
   "license": "MIT"
 }
