@@ -4,9 +4,11 @@
   "description": "The egg ts example project that uses egg-sequelize plugin.",
   "private": true,
   "dependencies": {
+    "@types/sequelize": "^4.28.20",
     "egg": "^2.10.0",
     "egg-sequelize": "^5.0.0",
-    "mysql2": "^1.6.1"
+    "mysql2": "^1.6.1",
+    "sequelize": "^6.37.7"
   },
   "devDependencies": {
     "@types/mocha": "^5.2.6",
