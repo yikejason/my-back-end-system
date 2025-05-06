@@ -1,0 +1,13 @@
+### get product list
+GET http://localhost:7001/products/list?offset=0&limit=10 
+Content-Type: application/json
+
+### create a product
+POST http://localhost:7001/products/create
+Content-Type: application/json
+
+{
+  "product_name": "Product 1",
+  "category": "Category 1",
+  "unit": "kg"
+}

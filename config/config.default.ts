@@ -20,6 +20,13 @@ export default function(appInfo: EggAppConfig) {
     }
   };
 
+
+  config.security = {
+    csrf: {
+      enable: false, // 直接关闭 csrf 校验
+    },
+  };
+
   const bizConfig = {
     // your biz config
   };

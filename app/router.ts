@@ -19,4 +19,9 @@ export default function(app: Application) {
   router.put('/posts/:id', controller.post.update);
   router.delete('/posts/:id', controller.post.destroy);
 
+  // Product routes
+  router.get('/products/list', controller.products.getList);
+  router.post('/products/create', controller.products.create);
+
+
 }
